@@ -8,14 +8,28 @@
 // - If it's a number, return `undefined`
 
 function lastCharacter(str) {
-  // Your code here
+  let result = undefined;
+  if (typeof str === "number"){
+    return undefined;
+  }
+  if (str.slice(-1)) {
+    result = str.slice(-1);
+  }
+  return result;
 }
-
+  // Your code here
+console.log(typeof 5)
+console.log(typeof 'decode')
+console.log(typeof {name:''})
 // Step 2
 // You're given 1 test case. Add 4 more, making sure to cover all of the
 // conditions specified above (don't forget empty string and number!!)
 
 expect(lastCharacter('max'), 'x');
+expect(lastCharacter('bacon'), 'n');
+expect(lastCharacter('jordan'), 'n');
+expect(lastCharacter(''), undefined);
+expect(lastCharacter(5), undefined);
 
 // Add 4 more test cases here!
 // 🌠 NOTE 🌠
